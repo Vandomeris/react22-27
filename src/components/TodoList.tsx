@@ -55,6 +55,33 @@ export default function TodoList() {
         }
     }
 
+    function goDown() {
+        setTodos(
+            todos.map(todo => {
+                if (todo.id === activeElement) {
+                    todo.completed = true
+                }
+                return todo
+            })
+        )
+
+        setActiveElement(null)
+    }
+
+    function goUp() {
+        setTodos(
+            todos.map(todo => {
+                if (todo.id === activeElement) {
+                    todo.completed = false
+                }
+                return todo
+            })
+        )
+
+        setActiveElement(null)
+    }
+
+
 
 
 
@@ -86,16 +113,13 @@ export default function TodoList() {
 
                 </div>
 
-
                 <div>
-                    <button>⬇</button>
-                    <button>⬆</button>
+                    <button onClick={() => goDown()} >⬇</button>
+                    <button onClick={() => goUp()} >⬆</button>
                 </div>
-
 
                 <div>
                     <h2>Завершенные дела</h2>
-
 
                     {
                         todos.filter(todo => todo.completed === true).map(todo => (
@@ -115,18 +139,6 @@ export default function TodoList() {
 
             </div>
 
-
-
-            {/* {
-                todos.map(todo => (
-
-                    <TodoItem
-                        todo={todo}
-                        changeCompleted={changeCompleted}
-                        deleteTodo={deleteTodo}
-                        editTitle={editTitle} />
-                ))
-            } */}
         </div>
     )
 
