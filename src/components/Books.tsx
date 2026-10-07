@@ -34,18 +34,39 @@ export default function Books() {
     const [publish, setPublish] = useState('')
 
 
+    async function handleSubmit(e: React.SubmitEvent) {
+
+        e.preventDefault()
+
+        const response = await ky.post('https://fakerestapi.azurewebsites.net/api/v1/Books', {
+            body: JSON.stringify({
+                title: title,
+                description: description,
+                pageCount: pages,
+                excerpt: excerpt,
+                publishDate: publish
+            }),
+            headers: {
+                "Content-Type": "application/json"
+            }
+        }).json()
+
+        console.log(response)
+
+    }
+
     return (
         <div>
 
             <div>
+                <form></form>
 
-
-                <form>
+                <form onSubmit={(e) => handleSubmit(e)}>
                     <input value={title} onInput={(e) => setTitle(e.currentTarget.value)} type="text" placeholder="Book Title" />
-                    <textarea value={description} placeholder="Book Description"></textarea>
-                    <input value={pages} type="number" placeholder="Pages" />
-                    <textarea value={excerpt} placeholder="Book Excerpt"></textarea>
-                    <input value={publish} type="datetime-local" />
+                    <textarea value={description} onInput={(e) => setDescription(e.currentTarget.value)} placeholder="Book Description"></textarea>
+                    <input value={pages} onInput={(e) => setPages(e.currentTarget.value)} type="number" placeholder="Pages" />
+                    <textarea value={excerpt} onInput={(e) => setExcerpt(e.currentTarget.value)} placeholder="Book Excerpt"></textarea>
+                    <input value={publish} onChange={(e) => setPublish(e.currentTarget.value)} type="datetime-local" />
 
                     <button>Создать</button>
                 </form>
