@@ -1,8 +1,8 @@
-import Books from "./components/Books";
+import Phones from "./components/Phones";
 
 export default function App() {
 
   return (
-    <Books />
+    <Phones />
   )
 }

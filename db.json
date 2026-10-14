@@ -1,0 +1,102 @@
+{
+  "phones": [
+    {
+      "id": "1",
+      "brand": "Apple",
+      "model": "iPhone 15 Pro MAX ULTRA KLASS",
+      "storage": "256GB",
+      "color": "Натуральный титан",
+      "price": 120000,
+      "inStock": true
+    },
+    {
+      "id": "2",
+      "brand": "Samsung",
+      "model": "Galaxy S24 Ultra",
+      "storage": "512GB",
+      "color": "Черный титан",
+      "price": 135000,
+      "inStock": true
+    },
+    {
+      "id": "3",
+      "brand": "Xiaomi",
+      "model": "14 Ultra",
+      "storage": "512GB",
+      "color": "Черный",
+      "price": 110000,
+      "inStock": false
+    },
+    {
+      "id": "4",
+      "brand": "Google",
+      "model": "Pixel 8 Pro",
+      "storage": "128GB",
+      "color": "Фарфоровый",
+      "price": 90000,
+      "inStock": true
+    },
+    {
+      "brand": "вффыв",
+      "model": "вфыв",
+      "storage": "вфывфыв",
+      "color": "фвыфывфв",
+      "price": "3123123",
+      "inStock": false,
+      "id": "xQYZgstSEu4"
+    },
+    {
+      "brand": "вфыв",
+      "model": "вфыв",
+      "storage": "вфыв",
+      "color": "вфывф",
+      "price": "132313",
+      "inStock": false,
+      "id": "xPx86n_oRLM"
+    },
+    {
+      "brand": "",
+      "model": "",
+      "storage": "",
+      "color": "",
+      "price": 0,
+      "inStock": false,
+      "id": "A5ajc-9IciA"
+    },
+    {
+      "brand": "",
+      "model": "",
+      "storage": "",
+      "color": "",
+      "price": 0,
+      "inStock": false,
+      "id": "u9ejeFWV4Us"
+    },
+    {
+      "brand": "",
+      "model": "",
+      "storage": "",
+      "color": "",
+      "price": 0,
+      "inStock": false,
+      "id": "mQ2o0mNR9Q4"
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "phoneId": "1",
+      "author": "Алексей",
+      "rating": 5,
+      "comment": "Отличный экран и материалы корпуса."
+    },
+    {
+      "id": "2",
+      "phoneId": "2",
+      "author": "Мария",
+      "rating": 4,
+      "comment": "Камера супер, но телефон тяжеловат."
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
