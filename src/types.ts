@@ -15,5 +15,11 @@ export interface Phone {
     color: string
     price: number
     inStock: boolean
+}
 
+export interface Post{
+    userId: number,
+    id: number,
+    title: string,
+    body: string
 }

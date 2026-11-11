@@ -1,9 +1,12 @@
-import { Outlet } from "react-router";
+import { NavLink, Outlet } from "react-router";
 
 export default function MainLayout() {
     return (
         <div>
-            <header></header>
+            <header>
+                <NavLink to='/'>Главная</NavLink>
+                <NavLink to='/fibonacci'>Расчет Фибоначчи</NavLink>
+            </header>
 
             <main><Outlet /></main>
 
