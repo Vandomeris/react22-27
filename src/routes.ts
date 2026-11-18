@@ -4,6 +4,8 @@ import HomePage from "./pages/HomePage";
 import TimerPage from "./pages/TimerPage";
 import FibonacciCalcPage from "./pages/FibonacciCalcPage";
 import EditPostPage from "./pages/EditPostPage";
+import AuthorsPage from "./pages/AuthorsPage";
+import CartPage from "./pages/CartPage";
 
 export const routes = createBrowserRouter([
     {
@@ -21,6 +23,14 @@ export const routes = createBrowserRouter([
             {
                 path: "post/edit",
                 Component: EditPostPage
+            },
+            {
+                path: "authors",
+                Component: AuthorsPage
+            },
+            {
+                path: 'cart',
+                Component: CartPage
             }
         ]
     }

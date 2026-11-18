@@ -29,3 +29,11 @@ export interface AuthUser{
     email: string,
     balance: number
 }
+
+
+export interface AuthorType {
+    "id": number,
+    "idBook": number,
+    "firstName": string,
+    "lastName": string
+}
