@@ -1,4 +1,5 @@
-import { useMemo, useState } from "react"
+import { useContext, useEffect, useMemo, useState } from "react"
+import { AuthContext } from "../context/authContext"
 
 function fibonacciCalc(n: number): number  {
 
@@ -9,6 +10,7 @@ function fibonacciCalc(n: number): number  {
 }
 
 export default function FibonacciCalcPage(){
+    const context = useContext(AuthContext)
 
     const [number, setNumber] = useState(1)
     const [theme, setTheme] = useState<'light' | 'dark'>('light')
@@ -19,6 +21,9 @@ export default function FibonacciCalcPage(){
     )
 
 
+ 
+
+
     function changeTheme(){
         if(theme === 'light'){
             setTheme("dark")
@@ -27,8 +32,10 @@ export default function FibonacciCalcPage(){
         }
     }
 
+
     return (
         <div className={theme === "dark" ? "bg-gray-500 text-white": ''}>
+            <p>У вас на балансе осталось: {context?.user?.balance}$</p>
             <button onClick={changeTheme}>Поменять тему</button>
             <input value={number} onInput={(e) => setNumber(Number(e.currentTarget.value))} type="number" placeholder="Введите число Фибоначчи" />
             <p>Число: {result}</p>
