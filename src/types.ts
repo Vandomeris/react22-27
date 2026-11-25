@@ -37,3 +37,9 @@ export interface AuthorType {
     "firstName": string,
     "lastName": string
 }
+
+
+export interface LoginResponse{
+    access_token: string,
+    token_type: string
+}

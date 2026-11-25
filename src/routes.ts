@@ -6,6 +6,7 @@ import FibonacciCalcPage from "./pages/FibonacciCalcPage";
 import EditPostPage from "./pages/EditPostPage";
 import AuthorsPage from "./pages/AuthorsPage";
 import CartPage from "./pages/CartPage";
+import LoginPage from "./pages/LoginPage";
 
 export const routes = createBrowserRouter([
     {
@@ -31,7 +32,14 @@ export const routes = createBrowserRouter([
             {
                 path: 'cart',
                 Component: CartPage
+            },
+            {
+                path: 'login',
+                Component: LoginPage
             }
         ]
     }
 ])
+
+
+
